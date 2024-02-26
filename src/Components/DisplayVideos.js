@@ -10,7 +10,7 @@ import '../App.css';
 function DisplayVideos({url}) {
     const [paused, setPaused] = useState(false);
     const [progress, setProgress] = useState(0);
-    const [muted, setMuted] = useState(false);
+    const [muted, setMuted] = useState(true);
     const videoRef = useRef(null);
 
 
@@ -68,6 +68,7 @@ function DisplayVideos({url}) {
                 className="w-full h-full object-cover transition-opacity duration-500 ease-in-out"
                 autoPlay
                 loop
+                muted
             ></video>
 
             {paused ? (
